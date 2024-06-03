@@ -10,8 +10,8 @@ export const options = {
   scenarios: {
     ui: {
       executor: 'shared-iterations',
-      vus: 1,
-      iterations: 1,
+      vus: 10,
+      iterations: 200,
       options: {
         browser: {
           type: 'chromium',
@@ -20,7 +20,7 @@ export const options = {
     },
   },
   thresholds: {
-    http_req_failed: ['rate<0.01'],
+    http_req_failed: ['rate<0.01'], // http errors should be less than 1%
   },
 };
 
